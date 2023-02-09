@@ -22,12 +22,7 @@ h1{
 }
 
 
-
-.hide {
-    display: none;
-}
-
-.container {
+.game-square {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -43,7 +38,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size: 100px;
     cursor: pointer;
 }
 
@@ -67,7 +62,7 @@ h1{
     color: white;
     padding: 8px;
     border-radius: 8px;
-   border-color: white;
+    border-color: white;
     font-size: 20px;
     
     cursor: pointer;
@@ -84,4 +79,8 @@ h1{
     background-color: burlywood;
     color: black;
     border-color: black;
+}
+
+.hide {
+    display: none;
 }
