@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const tiles = Array.from(document.querySelectorAll('.tile'));
+    const squares = Array.from(document.querySelectorAll('.square'));
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#newGame');
     const announcer = document.querySelector('.announcer');
@@ -63,8 +63,8 @@ window.addEventListener('DOMContentLoaded', () => {
         announcer.classList.remove('hide');
     };
 
-    const isValidAction = (tile) => {
-        if (tile.innerText === 'X' || tile.innerText === 'O'){
+    const isValidAction = (square) => {
+        if (square.innerText === 'X' || square.innerText === 'O'){
             return false;
         }
 
@@ -82,10 +82,10 @@ window.addEventListener('DOMContentLoaded', () => {
         playerDisplay.classList.add(`player${currentPlayer}`);
     }
 
-    const userAction = (tile, index) => {
-        if(isValidAction(tile) && isGameActive) {
-            tile.innerText = currentPlayer;
-            tile.classList.add(`player${currentPlayer}`);
+    const userAction = (square, index) => {
+        if(isValidAction(square) && isGameActive) {
+            square.innerText = currentPlayer;
+            square.classList.add(`player${currentPlayer}`);
             updateBoard(index);
             handleResultValidation();
             changePlayer();
@@ -101,15 +101,15 @@ window.addEventListener('DOMContentLoaded', () => {
             changePlayer();
         }
 
-        tiles.forEach(tile => {
-            tile.innerText = '';
-            tile.classList.remove('playerX');
-            tile.classList.remove('playerO');
+        square.forEach(square => {
+            square.innerText = '';
+            square.classList.remove('playerX');
+            square.classList.remove('playerO');
         });
     }
 
-    tiles.forEach( (tile, index) => {
-        tile.addEventListener('click', () => userAction(tile, index));
+    squares.forEach( (square, index) => {
+        square.addEventListener('click', () => userAction(square, index));
     });
 
     resetButton.addEventListener('click', resetBoard);
