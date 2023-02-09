@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', () => {
             changePlayer();
         }
 
-        square.forEach(square => {
+        squares.forEach(square => {
             square.innerText = '';
             square.classList.remove('playerX');
             square.classList.remove('playerO');

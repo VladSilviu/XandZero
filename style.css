@@ -1,34 +1,27 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Kalam', cursive;
+    background-image: url('images/background.png');
+    
    
 }
 
-.background {
-    background-color: #251357;
-    height: 100vh;
-    padding-top: 1px;
-}
-
-.title {
-        color: rgb(201, 174, 53);
-        text-align: center;
-        font-size: 40px;
-        margin-top: 10%;
-}
-
-.display {
-    color: white;
-    font-size: 50px;
-    text-align: center;
-   
-}
 h1{
     font-size: 50px;
     display: flex;
     justify-content: center;
-    color:#e9e9e9;
+    color: burlywood;
 }
+
+.game {
+    color: burlywood;
+    font-size: 50px;
+    text-align: center;
+   
+}
+
+
 
 .hide {
     display: none;
@@ -45,8 +38,8 @@ h1{
 }
 
 .square {
-    
-    border: 2px solid white;
+
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +48,7 @@ h1{
 }
 
 .playerX {
-    color: #09C372;
+    color: blue;
 }
 
 .playerO {
@@ -81,10 +74,14 @@ h1{
    
 }
 
+
 .restart {
     background-color: #498AFB;
 }
 
 #newGame {
-    background-color: #125f35;
+    font-family: 'Kalam', cursive;
+    background-color: burlywood;
+    color: black;
+    border-color: black;
 }
